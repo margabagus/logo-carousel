@@ -24,3 +24,16 @@ Simple and lightweight logo carousel for WordPress and Divi theme. Perfect for d
 
 <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/gh/margabagus/logo-carousel@main/dist/js/logo-carousel.min.js"></script>
+```
+
+## Documentation
+See the [installation guide](installation.md) for detailed installation and usage instructions.
+
+## Version
+Current version: 1.0.0
+
+## Repository
+https://github.com/margabagus/logo-carousel.git
+
+## License
+MIT License
