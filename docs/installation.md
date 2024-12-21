@@ -2,9 +2,12 @@
 
 ## Table of Contents
 - [WordPress Installation](#wordpress-installation)
+  - [Method 1: Using functions.php](#method-1-using-functionsphp)
+  - [Method 2: Local Installation](#method-2-local-installation)
 - [CDN Installation](#cdn-installation)
 - [Manual Installation](#manual-installation)
-- [Package Manager Installation](#package-manager-installation)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
 
 ## WordPress Installation
 
@@ -17,6 +20,7 @@ function enqueue_logo_carousel_assets() {
     wp_enqueue_script('logo-carousel', 'https://cdn.jsdelivr.net/gh/margabagus/logo-carousel@main/dist/js/logo-carousel.min.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_logo_carousel_assets');
+```
 
 ### Method 2: Local Installation
 1. Download the latest release
@@ -29,12 +33,15 @@ function enqueue_logo_carousel_assets() {
     wp_enqueue_script('logo-carousel', get_stylesheet_directory_uri() . '/assets/logo-carousel/js/logo-carousel.min.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_logo_carousel_assets');
+```
 
 ## CDN Installation
 jsDelivr
 
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/margabagus/logo-carousel@main/dist/css/logo-carousel.min.css">
 <script src="https://cdn.jsdelivr.net/gh/margabagus/logo-carousel@main/dist/js/logo-carousel.min.js"></script>
+```
 
 ## Manual Installation
 1. Download the latest release from GitHub
@@ -44,17 +51,17 @@ jsDelivr
 ```html
 <link rel="stylesheet" href="path/to/logo-carousel.min.css">
 <script src="path/to/logo-carousel.min.js"></script>
+```
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. jQuery not found
-Ensure jQuery is loaded before logo-carousel.js
+1. **jQuery not found**  
+   Ensure jQuery is loaded before logo-carousel.js
 
-2. Styles not applying
-Check if CSS file is properly loaded
+2. **Styles not applying**  
+   Check if CSS file is properly loaded
 
-3. Animation not working
-Verify JavaScript console for errors
-
+3. **Animation not working**  
+   Verify JavaScript console for errors
