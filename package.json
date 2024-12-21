@@ -1,0 +1,89 @@
+{
+    "name": "logo-carousel",
+    "version": "1.0.0",
+    "description": "Simple and lightweight logo carousel for WordPress and general web use",
+    "main": "dist/js/logo-carousel.min.js",
+    "scripts": {
+      "build": "npm run clean && npm run build:css && npm run build:js",
+      "build:css": "postcss src/css/logo-carousel.css -o dist/css/logo-carousel.min.css",
+      "build:js": "uglifyjs src/js/logo-carousel.js -o dist/js/logo-carousel.min.js",
+      "clean": "rimraf dist/*",
+      "watch": "npm-watch",
+      "lint": "eslint src/js/*.js",
+      "lint:css": "stylelint src/css/*.css",
+      "format": "prettier --write \"src/**/*.{js,css}\"",
+      "prepare": "husky install"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/margabagus/logo-carousel.git"
+    },
+    "keywords": [
+      "logo",
+      "carousel",
+      "slider",
+      "wordpress",
+      "divi",
+      "logo-slider",
+      "wordpress-plugin",
+      "divi-module"
+    ],
+    "author": {
+      "name": "Marga Bagus",
+      "email": "hallo@margabagus.com",
+      "url": "https://margabagus.com"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/margabagus/logo-carousel/issues"
+    },
+    "homepage": "https://github.com/margabagus/logo-carousel#readme",
+    "dependencies": {
+      "jquery": "^3.6.0"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.4.0",
+      "cssnano": "^5.0.0",
+      "eslint": "^8.0.0",
+      "eslint-config-prettier": "^8.3.0",
+      "husky": "^7.0.0",
+      "lint-staged": "^11.2.0",
+      "npm-watch": "^0.11.0",
+      "postcss": "^8.4.0",
+      "postcss-cli": "^8.3.0",
+      "prettier": "^2.4.0",
+      "rimraf": "^3.0.2",
+      "stylelint": "^14.0.0",
+      "stylelint-config-standard": "^24.0.0",
+      "uglify-js": "^3.14.0"
+    },
+    "watch": {
+      "build:css": {
+        "patterns": ["src/css"],
+        "extensions": "css"
+      },
+      "build:js": {
+        "patterns": ["src/js"],
+        "extensions": "js"
+      }
+    },
+    "lint-staged": {
+      "src/**/*.js": [
+        "eslint --fix",
+        "prettier --write"
+      ],
+      "src/**/*.css": [
+        "stylelint --fix",
+        "prettier --write"
+      ]
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not dead"
+    ],
+    "engines": {
+      "node": ">=14.0.0",
+      "npm": ">=6.0.0"
+    }
+  }
