@@ -27,7 +27,7 @@ Simple and lightweight logo carousel for WordPress and Divi theme. Perfect for d
 ```
 
 ## Documentation
-See the [installation guide](installation.md) for detailed installation and usage instructions.
+See the [installation guide](docs/installation.md) for detailed installation and usage instructions.
 
 ## Version
 Current version: 1.0.0
